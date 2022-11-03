@@ -15,8 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from songcrud_api import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('musicapp/', include('musicapp.urls'))
+    path('musicapp/', include('musicapp.urls')),
+    path('', include('songcrud_api.url')),
+
+
 ]
