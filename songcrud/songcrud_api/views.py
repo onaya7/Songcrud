@@ -24,7 +24,7 @@ def song_list(request, format=None):
 @api_view(['GET', 'PUT', 'DELETE'])
 def song_detail(request, pk, format=None):
 
-    #    Retrieve, update or delete a song.
+    #Retrieve, update or delete a song.
     try:
         song = Song.objects.get(pk=pk)
     except Song.DoesNotExist:
